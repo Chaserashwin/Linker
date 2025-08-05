@@ -12,7 +12,7 @@ A social media platform to connect with people.
 - [Contributing](#contributing)
 - [Licence](#licence)
 
-## Features
+## ✅Features
 
 - Add Story, Posts
 - Send Messages
@@ -20,7 +20,7 @@ A social media platform to connect with people.
 
 ## Demo
 
-## Tech_Stack
+## 🚀Tech_Stack
 
 - ReactJS
 - JavaScript
@@ -31,7 +31,7 @@ A social media platform to connect with people.
 - Inngest
 - Vercel
 
-## Installation
+## 📦Installation
 
 1. Clone the repository:
 

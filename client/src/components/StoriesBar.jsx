@@ -2,9 +2,13 @@ import React, { useEffect, useState } from "react";
 import { dummyStoriesData } from "../assets/assets.js";
 import { Plus } from "lucide-react";
 import moment from "moment";
+import StoryModal from "./StoryModal.jsx";
+import StoryViewer from "./StoryViewer.jsx";
 
 const StoriesBar = () => {
   const [stories, setStories] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [viewStory, setViewStory] = useState(null);
 
   const fetchStories = async () => {
     setStories(dummyStoriesData);
@@ -18,7 +22,10 @@ const StoriesBar = () => {
     <div className="w-screen sm:w-[calc(100vw-240px)] lg:max-w-2xl no-scrollbar overflow-x-auto px-4">
       <div className="flex gap-4 pb-5">
         {/* Add Story Card */}
-        <div className="rounded-lg shadow-sm min-w-30 max-w-30 max-h-40 aspect-[3/4] cursor-pointer hover:shadow-lg transition-all duration-200 border-2 border-dashed border-indigo-300 bg-gradient-to-b from-indigo-50 to-white">
+        <div
+          onClick={() => setShowModal(true)}
+          className="rounded-lg shadow-sm min-w-30 max-w-30 max-h-40 aspect-[3/4] cursor-pointer hover:shadow-lg transition-all duration-200 border-2 border-dashed border-indigo-300 bg-gradient-to-b from-indigo-50 to-white"
+        >
           <div className="h-full flex flex-col items-center justify-center p-4">
             <div className="size-10 bg-indigo-500 rounded-full flex items-center justify-center mb-3">
               <Plus className="w-5 h-5 text-white" />
@@ -31,6 +38,7 @@ const StoriesBar = () => {
         {/* Story Cards */}
         {stories.map((story, index) => (
           <div
+            onClick={() => setViewStory(story)}
             key={index}
             className={`relative rounded-lg shadow min-w-30 max-w-30 max-h-40 cursor-pointer hover:shadow-lg transition-all duration-200 bg-gradient-to-b from-indigo-500 to-purple-600 hover:from-indigo-700 hover:to-purple-800 active-scale-95`}
           >
@@ -61,6 +69,15 @@ const StoriesBar = () => {
           </div>
         ))}
       </div>
+      {/* Add Story Modal */}
+      {showModal && (
+        <StoryModal setShowModal={setShowModal} fetchStories={fetchStories} />
+      )}
+
+      {/* View Story Modal */}
+      {viewStory && (
+        <StoryViewer viewStory={viewStory} setViewStory={setViewStory} />
+      )}
     </div>
   );
 };
