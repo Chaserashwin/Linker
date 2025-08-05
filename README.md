@@ -1,28 +1,64 @@
-1. first we have created the project using the basic command of vite
-   npm create vite@latest
+# Linker
 
-2. Then We have deleted the unnecessary files so to initalise the project
+A social media platform to connect with people.
 
-3. Then we have include google font
+## Table of Contents
 
-4. Install Tailwind with vite and configure it
+- [Features](#features)
+- [Demo](#demo)
+- [Tech Stack](#tech_stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Licence](#licence)
 
-5. Install lucide-react package (for icons)
+## Features
 
-6. Created folder structure
-   -src --- components
-   |
-   |--- pages -- (creating different pages here)
+- Add Story, Posts
+- Send Messages
+- Make Connections
 
-7. To move into these pages adding react-router-dom package
+## Demo
 
-8. Replacing the strictmode with BrowserRouter
+## Tech_Stack
 
----
+- ReactJS
+- JavaScript
+- Tailwind
+- Clerk
+- MongoDB
+- ExpressJs
+- Inngest
+- Vercel
 
-remaining:-
-story create
-story view
-post like comments etc
+## Installation
 
-6:46:09
+1. Clone the repository:
+
+```bash
+ git clone https://github.com/Chaserashwin/chaserCart.git
+```
+
+2. Install dependencies:
+
+```bash
+ npm install
+```
+
+## Usage
+
+To run the project, use the following command:
+
+```bash
+npm start
+```
+
+## Contributing
+
+Linker is an open-source project, and we welcome contributions from the community.
+
+If you'd like to contribute, please fork the repository and make any changes you'd like. Pull requests are warmly welcome.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
